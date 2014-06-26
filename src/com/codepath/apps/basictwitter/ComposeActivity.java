@@ -25,7 +25,8 @@ public class ComposeActivity extends Activity{
 		setupViews();
 
 		tvCount.setText(String.valueOf(STATUS_MAX_LENGTH));
-		tvCount.setTextColor(Color.GRAY);
+		tvCount.setTextColor(Color.BLACK);
+		tvCount.setTextSize(20);
 
 		etNewTweet.addTextChangedListener(new TextWatcher() {
 

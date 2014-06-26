@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/tvScreenName"
         android:layout_alignLeft="@+id/tvName"
-        android:layout_marginBottom="58dp"
+        android:layout_marginBottom="20dp"
         android:text="Body" />
 
     <ImageView
@@ -26,19 +26,21 @@
         android:id="@+id/tvTimestamp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ivProfileImg"
+        android:layout_alignLeft="@+id/tvName"
         android:layout_below="@+id/tvScreenName"
         android:text="Time stamp"
+        android:layout_marginBottom="20dp"
         android:textSize="12sp" />
 
     <TextView
         android:id="@+id/tvScreenName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvTimestamp"
+        android:layout_alignLeft="@+id/tvName"
         android:layout_centerVertical="true"
         android:textStyle="bold"
         android:text="Screen Name"
+         android:layout_marginBottom="20dp"
         android:textSize="12sp" />
 
     <TextView
