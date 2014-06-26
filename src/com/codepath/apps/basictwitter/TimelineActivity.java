@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import com.codepath.apps.basictwitter.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,9 +17,12 @@ import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class TimelineActivity extends Activity {
 
@@ -28,6 +32,9 @@ public class TimelineActivity extends Activity {
 	private ArrayAdapter<Tweet> aTweets;
 	private SwipeRefreshLayout swipeLayout;
 	private ListView lvTweets;
+	//long max_id_pointer = 0;
+	//long since_id_pointer = 0;
+	//int count = 30;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,6 +67,18 @@ public class TimelineActivity extends Activity {
 			}
 		});
 		
+		lvTweets.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View v, int position,
+					long rowid) {
+				Intent i = new Intent(TimelineActivity.this, DetailActivity.class);
+				i.putExtra("tweet",  aTweets.getItem(position));
+				startActivity(i);
+			}
+			
+		});
+
 		populateTimeline();
 	}
 	@Override
@@ -151,4 +170,5 @@ public class TimelineActivity extends Activity {
 			}
 		});
 	}
+
 }

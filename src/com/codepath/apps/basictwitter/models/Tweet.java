@@ -1,5 +1,6 @@
 package com.codepath.apps.basictwitter.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -9,7 +10,7 @@ import org.json.JSONObject;
 
 import android.util.Log;
 
-public class Tweet {
+public class Tweet implements Serializable {
 
 	public String getBody() {
 		return body;

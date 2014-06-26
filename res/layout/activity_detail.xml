@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_twitter_background" >
+
+    <TextView
+        android:id="@+id/tvBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvScreenName"
+        android:layout_alignLeft="@+id/tvName"
+        android:layout_marginBottom="58dp"
+        android:text="Body" />
+
+    <ImageView
+        android:id="@+id/ivProfileImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_twitter" />
+
+    <TextView
+        android:id="@+id/tvTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivProfileImg"
+        android:layout_below="@+id/tvScreenName"
+        android:text="Time stamp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvScreenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTimestamp"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:text="Screen Name"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvBody"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:text="User Name"
+        android:textSize="12sp" />
+
+</RelativeLayout>

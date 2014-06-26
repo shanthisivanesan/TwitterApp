@@ -1,9 +1,11 @@
 package com.codepath.apps.basictwitter.models;
 
+import java.io.Serializable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class User {
+public class User implements Serializable {
 	private long uid;
 	private String name;
 	private String screenName;
@@ -31,7 +33,7 @@ public class User {
 		try {
 			user.uid = jsonObject.getLong("id");
 			user.name = jsonObject.getString("name");
-			user.screenName = jsonObject.getString("screen_name");
+			user.screenName = "@" + jsonObject.getString("screen_name");
 			user.imageProfileUrl = jsonObject.getString("profile_image_url");
 		} catch (JSONException e) {
 			e.printStackTrace();

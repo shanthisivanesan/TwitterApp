@@ -9,13 +9,18 @@
     tools:context=".LoginActivity" >
 
     <ImageButton
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@android:color/transparent"
     android:layout_margin="20dp"
     android:onClick="loginToRest"
-    android:text="@string/login_label"
+    android:contentDescription="@string/login_label"
     android:src="@drawable/ic_twitter_login"
     />
+    
+    
+
 
 </RelativeLayout>
