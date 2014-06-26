@@ -41,11 +41,11 @@ public class ComposeActivity extends Activity{
 				int count = STATUS_MAX_LENGTH - s.length();
 				tvCount.setText(String.valueOf(count));
 				if (count > 10) {
-					tvCount.setTextColor(Color.GRAY);
+					tvCount.setTextColor(Color.BLACK);
 				} else if (count > 5){
-					tvCount.setTextColor(Color.rgb(240, 190, 40)); // orange
+					tvCount.setTextColor(Color.rgb(240, 190, 40)); // almost close - orange
 				} else {
-					tvCount.setTextColor(Color.RED);
+					tvCount.setTextColor(Color.RED);//Exceeded limit - red
 				}
 			}
 		});
