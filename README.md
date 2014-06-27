@@ -37,3 +37,4 @@ Notes:
 Walkthrough of all user stories:
 
 ![Video Walkthrough](TwitterClient.gif)
+.
